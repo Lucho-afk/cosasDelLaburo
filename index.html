@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo: DOM Functions</title>
+    <script
+      src="./dojo-release-1.17.3/dojo/dojo.js"
+      data-dojo-config="async: true"
+    ></script>
+    <script src="./js/index.js"></script>
+  </head>
+  <body
+    onload="primerEjemplo('one','two');segundoEjemplo('list','three');tercerEjemplo();cuartoEjemplo();hover();crear()"
+  >
+    <ul id="list">
+      <li id="one">One</li>
+      <li id="two">Two</li>
+      <li id="three">El boton mueve esto</li>
+      <li id="four">Four</li>
+      <li id="five">Five</li>
+    </ul>
+    <button id="moveFirst">the firs item</button>
+    <button id="moveBeforeTwo">before two</button>
+    <button id="moveAfterFour">After Four</button>
+    <button id="moveLast">The last item</button>
+    <br />
+    <button id="destroyFirst">destroy first</button>
+    <button id="destroyAll">desttroy all</button>
+    <button id="constructOne">agregar 1</button>
+    <button id="suicida">me muero</button>
+    <hr />
+    <button id="myButton">Click me!</button>
+    <div id="myDiv">Hover over me!</div>
+    <hr />
+  </body>
+</html>
