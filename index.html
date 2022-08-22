@@ -10,7 +10,7 @@
     <script src="./js/index.js"></script>
   </head>
   <body
-    onload="primerEjemplo('one','two');segundoEjemplo('list','three');tercerEjemplo();cuartoEjemplo();hover();crear()"
+    onload="primerEjemplo('one','two');segundoEjemplo('list','three');tercerEjemplo();cuartoEjemplo();hover();crear();acumulador();"
   >
     <ul id="list">
       <li id="one">One</li>
@@ -18,6 +18,7 @@
       <li id="three">El boton mueve esto</li>
       <li id="four">Four</li>
       <li id="five">Five</li>
+      <li id="test"></li>
     </ul>
     <button id="moveFirst">the firs item</button>
     <button id="moveBeforeTwo">before two</button>
@@ -31,6 +32,9 @@
     <hr />
     <button id="myButton">Click me!</button>
     <div id="myDiv">Hover over me!</div>
+    <hr />
+    <button id="sumar">sumar</button>
+    <button id="restar">restar</button>
     <hr />
   </body>
 </html>

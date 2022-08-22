@@ -190,3 +190,37 @@ function crear() {
     on(dom.byId("constructOne"), "click", agregar);
   });
 }
+
+function acumulador() {
+  require([
+    "app/modulo",
+    "dojo/on",
+    "dojo/dom",
+    "dojo/dom-construct",
+    "dojo/domReady!",
+  ], function (modulo, on, dom, domConstruct) {
+    function sumar() {
+      modulo.increment();
+      domConstruct.create(
+        "li", // hay que poner el tipo de elemento que se esta agregardo
+        {
+          innerHTML: modulo.getValue(),
+        },
+        "list",
+        "after"
+      );
+    }
+
+    domConstruct.create(
+      "li", // hay que poner el tipo de elemento que se esta agregardo
+      {
+        innerHTML: modulo.getValue(),
+      },
+      four, //tambien podemos agregar la posicion [four,five], si ponemos list va a ir al lugar donde le corresponde en el codigo
+      "before"
+    );
+
+    on(dom.byId("sumar"), "click", sumar());
+    on(dom.byId("restar"), "click", modulo.decrement());
+  });
+}
